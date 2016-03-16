@@ -1,0 +1,11 @@
+import:
+- package: github.com/gorilla/websocket
+  version: e2e3d8414d0fbae04004f151979f4e27c6747fe7
+- package: github.com/rancher/go-machine-service
+  version: 937c50cc9a8b1bc87a92dc78e4e1e0c2ad32ed99
+- package: github.com/Sirupsen/logrus
+  version: 446d1c146faa8ed3f4218f056fcd165f6bcfda81
+- package: github.com/rancher/go-rancher
+  version: ce2d465a0d29d81724fea8d4adbffbba86256fba
+- package: github.com/codegangsta/cli
+  version: aca5b047ed14d17224157c3434ea93bf6cdaadee
