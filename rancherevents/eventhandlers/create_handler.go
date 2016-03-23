@@ -60,6 +60,7 @@ func (h *CreateHandler) execute(event *revents.Event, cli *client.RancherClient)
 	}
 	defer os.RemoveAll(rootDir)
 
+	environment["DOCKER_HOST"] = os.Getenv("DOCKER_HOST")
 	env := []string{}
 	for k, v := range environment {
 		env = append(env, fmt.Sprintf("%s=%s", k, v))

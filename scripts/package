@@ -9,6 +9,9 @@ TAG=${TAG:-${VERSION}}
 REPO=${REPO:-rancher}
 
 cp ../bin/swarm-agent .
+ID=$(docker create swarm)
+docker cp ${ID}:/swarm .
+docker rm -f ${ID}
 docker build -t ${REPO}/swarm-agent:${TAG} .
 
 echo Built ${REPO}/swarm-agent:${TAG}
