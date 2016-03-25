@@ -127,9 +127,12 @@ func (h *CreateHandler) createFiles(templates map[string]string) (string, error)
 	}
 
 	if len(templates) == 1 {
-		for name, value := range templates {
-			templates["docker-compose.yaml"] = value
-			delete(templates, name)
+		composeFile := ""
+		for _, value := range templates {
+			composeFile = value
+		}
+		templates = map[string]string{
+			"docker-compose.yaml": composeFile,
 		}
 	}
 
