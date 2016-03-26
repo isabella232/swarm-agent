@@ -49,6 +49,11 @@ func (h *CreateHandler) execute(event *revents.Event, cli *client.RancherClient)
 	name := util.GetString(event.Data, "environment", "name")
 	templates := util.GetStringMap(event.Data, "environment", "data", "fields", "templates")
 	environment := util.GetStringMap(event.Data, "environment", "data", "fields", "environment")
+
+	if environment == nil {
+		environment = map[string]string{}
+	}
+
 	if len(templates) == 0 {
 		log.Info("No templates found, returning")
 		return nil
