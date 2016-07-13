@@ -3,8 +3,8 @@ import:
   version: e2e3d8414d0fbae04004f151979f4e27c6747fe7
 - package: github.com/rancher/go-rancher-metadata
   version: 3336d4004ef4ad0809bf7131124a74b90f5bfa40
-- package: github.com/rancher/go-machine-service
-  version: 937c50cc9a8b1bc87a92dc78e4e1e0c2ad32ed99
+- package: github.com/rancher/event-subscriber
+  version: 2e42f210dae2234d08786806100b4ddc4ce87641
 - package: github.com/fsouza/go-dockerclient
   version: cec3f19b1d800de38185ec0e08446156254ec463
 - package: github.com/rancher/go-rancher
